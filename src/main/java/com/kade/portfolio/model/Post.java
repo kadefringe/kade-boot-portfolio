@@ -1,5 +1,10 @@
 package com.kade.portfolio.model;
 
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,10 +13,8 @@ import lombok.Data;
 
 
 @Entity
-// JPAエンティティ：ポスト(POSTリクエストじゃなくて記事)
 // JPA entity: not POST request, articles for blogs or something
 @Data
-// めんどいコードはこれ一本で
 // reduce boilerplate codes
 public class Post {
 	@Id
@@ -20,6 +23,11 @@ public class Post {
 	
 	private String title;
 	private String content;
-	// 必要によってメンバは追加していく
-	// add members along demand
+	private String author;
+	
+	@CreationTimestamp
+	private LocalDateTime createdAt;
+	
+	@UpdateTimestamp
+	private LocalDateTime updatedAt;
 }

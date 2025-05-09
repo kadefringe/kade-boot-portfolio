@@ -15,7 +15,7 @@ import com.kade.portfolio.model.Post;
 import com.kade.portfolio.service.PostService;
 
 @RestController
-@RequestMapping("/posts")
+@RequestMapping("/api/posts")
 public class PostController {
 	
 	@Autowired
