@@ -20,6 +20,9 @@ bin/
 tmp/
 build/
 
+# === Code ===
+.vscode/
+
 # === OS Files ===
 .DS_Store
 Thumbs.db
